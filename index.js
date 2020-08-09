@@ -22,15 +22,15 @@ function addAnItem() {
   }
   
   function deleteButton() {
-      $('ul').on('click', '.shopping-item-delete', event => { 
-          $(event.currentTarget).closest('li').remove()
+      $('ul').on('click', '.shopping-item-delete', function(event) { 
+          $(this).closest('li').remove()
       });
   } 
   
   
   function checkButton() {
-      $('ul').on('click', '.shopping-item-toggle', event => {
-         $(event.currentTarget).closest('li').find('.shopping-item').toggleClass('shopping-item__checked'); 
+      $('ul').on('click', '.shopping-item-toggle', function(event) {
+         $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked'); 
   
       });
   
